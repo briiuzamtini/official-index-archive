@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>尊龙凯时 · 稳定入口叙事</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f7f5f2;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.7;
+            color: #1d1b1a;
+            padding: 2rem 1.5rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .page {
+            max-width: 700px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        /* 叙事开场 — 简短、留白、呼吸感 */
+        .opening {
+            margin-top: 3.5rem;
+            margin-bottom: 3rem;
+            letter-spacing: 0.01em;
+        }
+
+        .opening p {
+            font-size: 1.25rem;
+            font-weight: 350;
+            color: #2b2725;
+            line-height: 1.6;
+            max-width: 620px;
+        }
+
+        .opening span {
+            display: block;
+            margin-top: 0.35rem;
+            color: #6b5f58;
+            font-size: 0.95rem;
+            font-weight: 330;
+            border-left: 2px solid #c9b9ac;
+            padding-left: 1.2rem;
+        }
+
+        /* 承接段落 — 安静叙述 */
+        .bridge {
+            margin: 2.5rem 0 2.8rem 0;
+        }
+
+        .bridge p {
+            font-size: 1rem;
+            color: #302c29;
+            margin-bottom: 1.2rem;
+            font-weight: 340;
+        }
+
+        .bridge a {
+            color: #7a3f2b;
+            text-decoration: none;
+            border-bottom: 1px solid #bda79b;
+            transition: border-color 0.15s, color 0.15s;
+            font-weight: 380;
+        }
+
+        .bridge a:hover {
+            color: #4f291b;
+            border-bottom-color: #4f291b;
+        }
+
+        /* 特点列表 — 干净卡片状，极窄呼吸 */
+        .feature-list {
+            margin: 3rem 0 2.8rem 0;
+            border-top: 1px solid #e2d6cd;
+            padding-top: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.35rem;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: baseline;
+            gap: 0.8rem;
+        }
+
+        .feature-item::before {
+            content: "—";
+            font-size: 0.9rem;
+            color: #a38779;
+            flex-shrink: 0;
+            width: 1.2rem;
+        }
+
+        .feature-item strong {
+            font-weight: 460;
+            color: #2f2621;
+            min-width: 5.5rem;
+            font-size: 0.98rem;
+            letter-spacing: 0.01em;
+        }
+
+        .feature-item .desc {
+            color: #3f3732;
+            font-weight: 330;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        /* 温和收尾 + 引用感 */
+        .closing {
+            margin-top: 3.5rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e2d6cd;
+        }
+
+        .closing p {
+            font-size: 0.95rem;
+            color: #4a413c;
+            font-weight: 330;
+            max-width: 580px;
+            margin-bottom: 0.8rem;
+        }
+
+        .closing .footnote {
+            font-size: 0.82rem;
+            color: #837268;
+            margin-top: 1.8rem;
+            letter-spacing: 0.02em;
+        }
+
+        /* 极简响应 */
+        @media (max-width: 500px) {
+            body {
+                padding: 1.2rem 1rem;
+            }
+            .opening {
+                margin-top: 2rem;
+            }
+            .opening p {
+                font-size: 1.12rem;
+            }
+            .feature-item {
+                flex-direction: column;
+                gap: 0.2rem;
+            }
+            .feature-item::before {
+                display: none;
+            }
+            .feature-item strong {
+                min-width: auto;
+            }
+        }
+
+        @media (min-width: 800px) {
+            .opening p {
+                font-size: 1.35rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+
+        <!-- 开场短句：自然叙述，氛围先行 -->
+        <div class="opening">
+            <p>
+                有时，一个页面之所以值得停留，<br>
+                不在于它许诺了多少，而在于它让人安心地知道——<br>
+                自己正站在一个稳定的入口前面。
+                <span>—— 然后，从这里开始。</span>
+            </p>
+        </div>
+
+        <!-- 承接段落：介绍 + 嵌入链接 “尊龙凯时” -->
+        <div class="bridge">
+            <p>
+                许多人在寻找一个清晰、少干扰的起点，用来了解自己关心的服务或品牌。
+                这个页面所指向的，正是这样一个地方——<a href="https://cn-zlg.com">尊龙凯时</a>。
+                它本身不喧哗，不堆砌弹窗，也不急于引导你做出选择。
+                页面结构平实，信息层级分明，像是为习惯安静浏览的人准备的索引。
+            </p>
+            <p>
+                如果你恰好需要更稳定的入口参照，无论是初次接触，还是想重新确认路径，
+                将这个地址记在书签里，也许会比反复搜索更省力。它就在那里，一直保持着同样的简洁。
+            </p>
+        </div>
+
+        <!-- 特点列表：从稳定入口与页面说明的角度展开 -->
+        <div class="feature-list">
+            <div class="feature-item">
+                <strong>入口稳定</strong>
+                <span class="desc">长期维护的单一地址，不随活动或临时页面变动，适合收藏与回访。</span>
+            </div>
+            <div class="feature-item">
+                <strong>层级清晰</strong>
+                <span class="desc">页面内部使用明确的分区与标题，不会让浏览者迷失在层层跳转中。</span>
+            </div>
+            <div class="feature-item">
+                <strong>信息克制</strong>
+                <span class="desc">不放置闪烁横幅或自动播放内容，以朴素的文字和区块传递必要说明。</span>
+            </div>
+            <div class="feature-item">
+                <strong>专注指向</strong>
+                <span class="desc">整体围绕单一目标构建，没有多余分支，适合需要直截了当的用户。</span>
+            </div>
+        </div>
+
+        <!-- 温和结尾：一点提示 + FAQ 摘要感 -->
+        <div class="closing">
+            <p>
+                当然，一个页面无法回答所有问题。<br>
+                但它可以成为那个「你先去那里看看」的坐标。<br>
+                没有催促，没有多余装饰，就是一条清晰的路。
+            </p>
+            <p style="margin-top: 1.4rem;">
+                常见问题与更具体的说明，往往就藏在页面深处的某一段落里。
+                花一两分钟安静地滑动浏览，通常比四处问路更高效。
+            </p>
+            <p class="footnote">
+                — 保持简单，保持可靠。
+            </p>
+        </div>
+
+    </div>
+</body>
+</html>
