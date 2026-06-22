@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>人人体育 · 轻量导航</title>
+  <style>
+    /* —— 基调 —— */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: #fafafa;
+      color: #1a1e24;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* —— 顶部导航 —— */
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 28px 0 12px;
+      border-bottom: 1px solid #e6e8ec;
+      margin-bottom: 56px;
+    }
+
+    .nav-logo {
+      font-weight: 600;
+      font-size: 1.4rem;
+      letter-spacing: -0.02em;
+      color: #1e293b;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #3b4351;
+      font-size: 0.9rem;
+      font-weight: 450;
+      transition: color 0.15s;
+    }
+
+    .nav-links a:hover {
+      color: #0a0c0f;
+    }
+
+    /* —— Hero —— */
+    .hero {
+      margin-bottom: 60px;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 540;
+      letter-spacing: -0.03em;
+      line-height: 1.2;
+      margin-bottom: 20px;
+      color: #0f111a;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: #3e4653;
+      max-width: 620px;
+    }
+
+    /* —— 核心介绍 —— */
+    .intro-block {
+      margin-bottom: 52px;
+    }
+
+    .intro-block h2 {
+      font-size: 1.3rem;
+      font-weight: 520;
+      margin-bottom: 14px;
+      color: #1a1e2b;
+    }
+
+    .intro-block p {
+      margin-bottom: 18px;
+      color: #343b47;
+    }
+
+    .intro-block a {
+      color: #1e293b;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      text-decoration-thickness: 0.5px;
+      font-weight: 480;
+    }
+
+    .intro-block a:hover {
+      color: #000;
+    }
+
+    /* —— 三个场景模块 —— */
+    .scenes {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-bottom: 56px;
+    }
+
+    .scene-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 28px 18px 22px;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02), 0 4px 10px rgba(0, 0, 0, 0.02);
+      transition: box-shadow 0.2s;
+    }
+
+    .scene-card:hover {
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04), 0 8px 18px rgba(0, 0, 0, 0.03);
+    }
+
+    .scene-card h3 {
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin-bottom: 10px;
+      letter-spacing: -0.01em;
+      color: #181d27;
+    }
+
+    .scene-card p {
+      font-size: 0.9rem;
+      color: #454e5c;
+      line-height: 1.55;
+    }
+
+    .scene-card .icon {
+      display: inline-block;
+      margin-bottom: 14px;
+      font-size: 1.6rem;
+      color: #2b3442;
+    }
+
+    /* —— 常见说明（FAQ 摘要） —— */
+    .faq-summary {
+      margin-bottom: 56px;
+      border-top: 1px solid #e2e4e9;
+      padding-top: 36px;
+    }
+
+    .faq-summary h2 {
+      font-size: 1.2rem;
+      font-weight: 520;
+      margin-bottom: 28px;
+      color: #131823;
+    }
+
+    .faq-item {
+      margin-bottom: 22px;
+    }
+
+    .faq-item summary {
+      font-weight: 480;
+      color: #1b212d;
+      cursor: default;
+      margin-bottom: 4px;
+      font-size: 0.98rem;
+    }
+
+    .faq-item p {
+      color: #495262;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      margin-top: 4px;
+    }
+
+    /* —— 底部 —— */
+    .footer-note {
+      border-top: 1px solid #e6e8ec;
+      padding: 28px 0 40px;
+      font-size: 0.85rem;
+      color: #606978;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .footer-note a {
+      color: inherit;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      text-decoration-thickness: 0.5px;
+    }
+
+    .footer-note a:hover {
+      color: #1d232e;
+    }
+
+    /* —— 响应式 —— */
+    @media (max-width: 640px) {
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+        margin-bottom: 40px;
+      }
+
+      .nav-links {
+        gap: 20px;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .scenes {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      .scene-card {
+        padding: 24px 16px 20px;
+      }
+
+      .footer-note {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .container {
+        padding: 0 16px;
+      }
+
+      .hero h1 {
+        font-size: 1.7rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- 导航 -->
+    <nav class="nav">
+      <span class="nav-logo">人人体育</span>
+      <ul class="nav-links">
+        <li><a href="#intro">介绍</a></li>
+        <li><a href="#scenes">场景</a></li>
+        <li><a href="#faq">说明</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+      <h1>运动日常，<br>自然连接</h1>
+      <p>从社区球场到线上约练，人人体育关注普通人的运动节奏——不需要极端自律，也能找到适合自己的参与方式。</p>
+    </section>
+
+    <!-- 核心介绍 -->
+    <section id="intro" class="intro-block">
+      <h2>关于「人人体育」</h2>
+      <p>
+        人人体育不是一个高门槛的竞技标签，而是一种让运动更贴近生活的尝试。
+        不管是周末约一场球，下班后跑几圈，还是想为孩子找个合适的运动启蒙，
+        平台希望提供的是真实可用的信息与连接。如果你正在寻找一个能让你更自在地动起来的社区，
+        可以了解一下 <a href="https://ssl-renrensport.com">人人体育</a> 目前的服务与方向。
+      </p>
+      <p>
+        这里没有夸张的训练计划，也不贩卖身材焦虑。每个人都有自己的运动节奏，
+        人人体育所做的就是让这些节奏更容易被听见、被相遇。
+      </p>
+    </section>
+
+    <!-- 三个场景模块 -->
+    <section id="scenes" class="scenes">
+      <div class="scene-card">
+        <div class="icon">🏃</div>
+        <h3>城市跑搭子</h3>
+        <p>一个人跑容易偷懒？找个配速相近的跑友。人人体育里不少跑团会发布周末路线，新手也能轻松加入。</p>
+      </div>
+      <div class="scene-card">
+        <div class="icon">🏸</div>
+        <h3>球场拼场</h3>
+        <p>羽毛球、篮球、乒乓球……临时缺人？发布拼场信息，几分钟就能组起局。大家按自己时间灵活参与。</p>
+      </div>
+      <div class="scene-card">
+        <div class="icon">🧘</div>
+        <h3>轻运动日常</h3>
+        <p>瑜伽、拉伸、小区快走——运动不必很剧烈。分享你的日常活动，会发现原来有这么多人和你一样。</p>
+      </div>
+    </section>
+
+    <!-- 常见说明（FAQ 摘要） -->
+    <section id="faq" class="faq-summary">
+      <h2>一些常见说明</h2>
+
+      <div class="faq-item">
+        <summary>需要付费使用吗？</summary>
+        <p>人人体育的基础功能（浏览、参与普通活动）目前不收取费用。部分增值服务或专属活动可能另行说明，以平台页面公示为准。</p>
+      </div>
+
+      <div class="faq-item">
+        <summary>如何找到适合自己的运动圈子？</summary>
+        <p>你可以根据城市、运动类型或时间筛选，大部分圈子都欢迎新人。建议先围观一两次活动再决定是否深度加入。</p>
+      </div>
+
+      <div class="faq-item">
+        <summary>信息安全与隐私</summary>
+        <p>平台不会强制公开个人敏感信息。交流时注意保护隐私，运动约伴尽量选择公共场所。人人体育也会持续优化相关提示。</p>
+      </div>
+
+      <div class="faq-item">
+        <summary>如果我想发起活动呢？</summary>
+        <p>注册后即可创建活动，填写时间、地点、人数上限即可。建议提前一天发布，方便大家协调安排。</p>
+      </div>
+    </section>
+
+    <!-- 底部 -->
+    <footer class="footer-note">
+      <span>© 人人体育 · 轻量指南</span>
+      <span>了解更多 → <a href="https://ssl-renrensport.com">人人体育</a></span>
+    </footer>
+  </div>
+</body>
+</html>
